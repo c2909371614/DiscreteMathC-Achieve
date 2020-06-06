@@ -1,0 +1,58 @@
+# Project: 二元关系实现
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o getA_B.o subFun.o getA_A.o get_Ia.o get_La.o get_Db.o get_Ra.o get_BigerA.o get_inverse_R.o domR.o
+LINKOBJ  = main.o getA_B.o subFun.o getA_A.o get_Ia.o get_La.o get_Db.o get_Ra.o get_BigerA.o get_inverse_R.o domR.o
+LIBS     = -L"D:/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 二元关系实现.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+getA_B.o: getA_B.cpp
+	$(CPP) -c getA_B.cpp -o getA_B.o $(CXXFLAGS)
+
+subFun.o: subFun.cpp
+	$(CPP) -c subFun.cpp -o subFun.o $(CXXFLAGS)
+
+getA_A.o: getA_A.cpp
+	$(CPP) -c getA_A.cpp -o getA_A.o $(CXXFLAGS)
+
+get_Ia.o: get_Ia.cpp
+	$(CPP) -c get_Ia.cpp -o get_Ia.o $(CXXFLAGS)
+
+get_La.o: get_La.cpp
+	$(CPP) -c get_La.cpp -o get_La.o $(CXXFLAGS)
+
+get_Db.o: get_Db.cpp
+	$(CPP) -c get_Db.cpp -o get_Db.o $(CXXFLAGS)
+
+get_Ra.o: get_Ra.cpp
+	$(CPP) -c get_Ra.cpp -o get_Ra.o $(CXXFLAGS)
+
+get_BigerA.o: get_BigerA.cpp
+	$(CPP) -c get_BigerA.cpp -o get_BigerA.o $(CXXFLAGS)
+
+get_inverse_R.o: get_inverse_R.cpp
+	$(CPP) -c get_inverse_R.cpp -o get_inverse_R.o $(CXXFLAGS)
+
+domR.o: domR.cpp
+	$(CPP) -c domR.cpp -o domR.o $(CXXFLAGS)
