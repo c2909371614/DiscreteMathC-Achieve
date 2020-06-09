@@ -1,0 +1,61 @@
+# Project: set_and_set_operator_project
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Basic_fun.o set_Implement.o empty_diff_subNum_isSub.o IsRealSub_oppsDiff.o Relation_basic.o Relation_equal_big_small.o Relation_divide_contain_inverse.o mySub.o Relation_dom_ran_fld.o operator_set_and_relation.o overload_operator.o
+LINKOBJ  = main.o Basic_fun.o set_Implement.o empty_diff_subNum_isSub.o IsRealSub_oppsDiff.o Relation_basic.o Relation_equal_big_small.o Relation_divide_contain_inverse.o mySub.o Relation_dom_ran_fld.o operator_set_and_relation.o overload_operator.o
+LIBS     = -L"E:/Dev-Cpp/MinGW64/lib" -L"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"E:/Dev-Cpp/MinGW64/include" -I"E:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = set_and_set_operator_project.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Basic_fun.o: Basic_fun.cpp
+	$(CPP) -c Basic_fun.cpp -o Basic_fun.o $(CXXFLAGS)
+
+set_Implement.o: set_Implement.cpp
+	$(CPP) -c set_Implement.cpp -o set_Implement.o $(CXXFLAGS)
+
+empty_diff_subNum_isSub.o: empty_diff_subNum_isSub.cpp
+	$(CPP) -c empty_diff_subNum_isSub.cpp -o empty_diff_subNum_isSub.o $(CXXFLAGS)
+
+IsRealSub_oppsDiff.o: IsRealSub_oppsDiff.cpp
+	$(CPP) -c IsRealSub_oppsDiff.cpp -o IsRealSub_oppsDiff.o $(CXXFLAGS)
+
+Relation_basic.o: Relation_basic.cpp
+	$(CPP) -c Relation_basic.cpp -o Relation_basic.o $(CXXFLAGS)
+
+Relation_equal_big_small.o: Relation_equal_big_small.cpp
+	$(CPP) -c Relation_equal_big_small.cpp -o Relation_equal_big_small.o $(CXXFLAGS)
+
+Relation_divide_contain_inverse.o: Relation_divide_contain_inverse.cpp
+	$(CPP) -c Relation_divide_contain_inverse.cpp -o Relation_divide_contain_inverse.o $(CXXFLAGS)
+
+mySub.o: mySub.cpp
+	$(CPP) -c mySub.cpp -o mySub.o $(CXXFLAGS)
+
+Relation_dom_ran_fld.o: Relation_dom_ran_fld.cpp
+	$(CPP) -c Relation_dom_ran_fld.cpp -o Relation_dom_ran_fld.o $(CXXFLAGS)
+
+operator_set_and_relation.o: operator_set_and_relation.cpp
+	$(CPP) -c operator_set_and_relation.cpp -o operator_set_and_relation.o $(CXXFLAGS)
+
+overload_operator.o: overload_operator.cpp
+	$(CPP) -c overload_operator.cpp -o overload_operator.o $(CXXFLAGS)
